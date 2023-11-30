@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+//---------------deel 1 van de oefening----------------------------
+        // const radius1 = prompt("Wat is de radius?");
+        // const hoogte1 = prompt("Wat is de hoogte?");
+        // const aantalDecimalen1 = prompt("aantal decimalen voor de berekening?");
+
+        // const radius2 = prompt("Wat is de radius?");
+        // const hoogte2 = prompt("Wat is de hoogte?");
+        // const aantalDecimalen2 = prompt("aantal decimalen voor de berekening?");
+
+        // const volume1 = 3.1415 * radius1 * radius1 *hoogte1;
+        // const volume2 = 3.1415 * radius2 * radius2 *hoogte2;
+
+
+        // const somVolumes = volume1 + volume2;
+
+        // document.write(`<p>Het volume van de eerste cilinder is met radius ${radius1} en hoogte ${hoogte1} en aantal decimalen ${aantalDecimalen1} is ${volume1.toFixed(aantalDecimalen1)}</p>`)
+
+        // document.write(`<p>Het volume van de tweede cilinder is met radius ${radius2} en hoogte ${hoogte2} en aantal decimalen ${aantalDecimalen2} is ${volume2.toFixed(aantalDecimalen2)}</p>`)
+
+        // document.write(`samen is dit ${somVolumes.toFixed(0)}</p>`)
+
+        //---------------------------deel 2 aangepast----------------------
+
+        const radius1 = parseFloat(prompt("Wat is de radius?"));
+        const hoogte1 = parseFloat(prompt("Wat is de hoogte?"));
+        const aantalDecimalen1 = prompt("aantal decimalen voor de berekening?");
+
+        const afgerondRadius1 = parseFloat(radius1.toFixed(aantalDecimalen1));
+        const afgerondhoogte1 = parseFloat(hoogte1.toFixed(aantalDecimalen1))
+
+        const radius2 =  parseFloat(prompt("Wat is de radius?"));
+        const hoogte2 =  parseFloat(prompt("Wat is de radius?"));
+        const aantalDecimalen2 = prompt("aantal decimalen voor de berekening?");
+
+        const afgerondRadius2 = parseFloat(radius2.toFixed(aantalDecimalen2));
+        const afgerondhoogte2 = parseFloat(hoogte2.toFixed(aantalDecimalen2))
+
+        const volume1 = 3.1415 * afgerondRadius1 * afgerondRadius1 *afgerondhoogte1;
+        const volume2 = 3.1415 * afgerondRadius2 * afgerondRadius2 *afgerondhoogte2;
+
+
+        const somVolumes = volume1 + volume2;
+
+        document.write(`<p>Het volume van de eerste cilinder is met radius ${afgerondRadius1} en hoogte ${afgerondhoogte1} en aantal decimalen ${aantalDecimalen1} is ${volume1.toFixed(aantalDecimalen1)}</p>`)
+
+        document.write(`<p>Het volume van de tweede cilinder is met radius ${afgerondRadius2} en hoogte ${afgerondhoogte2} en aantal decimalen ${aantalDecimalen2} is ${volume2.toFixed(aantalDecimalen2)}</p>`)
+
+        document.write(`samen is dit ${somVolumes.toFixed(0)}</p>`)
+
+    </script>
+</body>
+</html>

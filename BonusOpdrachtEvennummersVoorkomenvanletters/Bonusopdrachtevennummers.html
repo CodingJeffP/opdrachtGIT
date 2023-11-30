@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus opdracht even nummers - voorkomen van een letter</title>
+</head>
+<body>
+    <script>
+        //---1---
+        const array =  [13, 23, 12, 45, 22, 48, 66, 100];
+        for(let i = 0; i<array.length;i++){
+            if(array[i]%2 == 0){
+                document.write(`${array[i]}, `);
+            }
+        }
+        //---2---
+
+
+
+        let zin = "Tel het aantal keer dat elke letter voorkomt in deze tekst";
+        let tellerArray = new Array(26);
+
+        for(let i = 0; i<26;i++){
+            tellerArray[i] = 0;
+        }
+
+
+        for (let i = 0; i < zin.length; i++) {
+            let karakter = zin.charAt(i).toLowerCase(); 
+            let code = karakter.charCodeAt(0);
+            tellerArray[code - 97]++; 
+        }
+
+        for(let i = 0;i<tellerArray.length; i++){
+            if(tellerArray[i] > 0){
+            let letter = String.fromCharCode(i+97);
+            document.write(`<p>${letter} : ${tellerArray[i]} keer</p>`);
+            }
+        }
+
+    </script>
+</body>
+</html>
